@@ -1,0 +1,132 @@
+/* Custom styling untuk DataTables */
+.dataTables_wrapper .dataTables_length select {
+    width: 80px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Responsive table styling */
+@media (max-width: 768px) {
+    .dataTables_wrapper .dataTables_length {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    /* Ensure nomor column is always visible on mobile */
+    .table td:first-child,
+    .table th:first-child {
+        min-width: 50px;
+        text-align: center !important;
+    }
+
+    /* Stack buttons vertically on very small screens */
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn-group .btn {
+        margin-bottom: 0.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Header responsive */
+    .card-header .row > div {
+        margin-bottom: 0.5rem;
+    }
+
+    .card-header .col-md-6:first-child {
+        order: 2;
+    }
+
+    .card-header .col-md-6:last-child {
+        order: 1;
+        text-align: center;
+    }
+
+    /* Search input full width on mobile */
+    #customSearch {
+        width: 100% !important;
+    }
+
+    /* Footer responsive */
+    .card-footer .row > div {
+        text-align: center !important;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-footer .col-md-4:first-child {
+        order: 3;
+    }
+
+    .card-footer .col-md-4:nth-child(2) {
+        order: 1;
+    }
+
+    .card-footer .col-md-4:last-child {
+        order: 2;
+    }
+}
+
+/* Ensure number column stays fixed */
+.table td:first-child,
+.table th:first-child {
+    position: sticky;
+    left: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.table thead th:first-child {
+    background-color: var(--bs-gray-100) !important;
+}
+
+/* Card footer styling */
+.card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 0.75rem 1.25rem;
+}
+
+.pagination-info {
+    padding-top: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.entries-info {
+    padding-top: 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* DataTables footer custom styling */
+.dataTables_length {
+    margin-bottom: 0;
+}
+
+.dataTables_length label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    font-size: 0.875rem;
+}
+
+.dataTables_length select {
+    margin: 0 0.5rem;
+}
+
+body { font-family: Arial, sans-serif; font-size: 12px; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { border: 1px solid #ddd; padding: 6px; text-align: left; }
+th { background-color: #f2f2f2; text-align: center; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.header { text-align: center; margin-bottom: 15px; }
+.title { font-size: 16px; font-weight: bold; }
+.subtitle { font-size: 12px; margin-bottom: 5px; }
